@@ -25,3 +25,6 @@
 *.ogg     binary
 *.mp3     binary
 *.wav     binary
+
+# https://bun.sh/docs/install/lockfile
+*.lockb binary diff=lockb
