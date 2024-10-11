@@ -20,7 +20,7 @@
     "SSR"
   ],
   "scripts": {
-    "clean": "rimraf public .greenwood .vercel",
+    "clean": "rimraf public .greenwood",
     "dev": "greenwood develop",
     "build": "greenwood build",
     "serve": "greenwood build && greenwood serve",
