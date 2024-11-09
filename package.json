@@ -24,7 +24,7 @@
     "dev": "greenwood develop",
     "build": "greenwood build",
     "serve": "greenwood build && greenwood serve",
-    "start": "npm run serve"
+    "start": "bun serve"
   },
   "devDependencies": {
     "@greenwood/cli": "~0.30.0-alpha.6",
