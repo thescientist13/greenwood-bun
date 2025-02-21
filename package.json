@@ -27,7 +27,7 @@
     "start": "bun serve"
   },
   "devDependencies": {
-    "@greenwood/cli": "~0.30.0-alpha.6",
+    "@greenwood/cli": "~0.31.0",
     "rimraf": "^5.0.0"
   }
 }

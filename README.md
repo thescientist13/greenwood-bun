@@ -7,11 +7,11 @@ A demonstration repo of using Greenwood with Bun.
 To run locally
 1. Install Bun >= `1.x`
 1. Clone the repo
-1. Run `bun install`
+1. Run `bun i`
 
 You can now run these npm scripts
-- `bun dev` - Start the demo with Greenwood local dev server
-- `bun start` - Start the demo with a production Greenwood build
+- `bun run --bun dev` - Start the demo with Greenwood local dev server
+- `bun run --bun  start` - Start the demo with a production Greenwood build
 
 ## Demo
 
@@ -25,3 +25,10 @@ This repo aims to demonstrate a couple of Greenwood's features ([API Routes](htt
 ### SSR Pages
 
 - ✅ `/products/` - SSR page for rendering Greenwood pages.
+
+
+## TODO
+
+1. [ ] pre-rendering / custom loaders? (like an SVG)
+1. [ ] TypeScript
+1. [ ] _.nvmrc_ / Bun version lock?
