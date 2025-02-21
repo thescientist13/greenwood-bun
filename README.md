@@ -25,3 +25,10 @@ This repo aims to demonstrate a couple of Greenwood's features ([API Routes](htt
 ### SSR Pages
 
 - ✅ `/products/` - SSR page for rendering Greenwood pages.
+
+
+## TODO
+
+1. [ ] pre-rendering / custom loaders? (like an SVG)
+1. [ ] TypeScript
+1. [ ] _.nvmrc_ / Bun version lock?
