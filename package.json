@@ -29,5 +29,8 @@
   "devDependencies": {
     "@greenwood/cli": "~0.31.0",
     "rimraf": "^5.0.0"
+  },
+  "patchedDependencies": {
+    "@greenwood/cli@0.31.1": "patches/@greenwood%2Fcli@0.31.1.patch"
   }
 }
