@@ -1,4 +1,4 @@
-export async function handler(request) {
+export async function handler(request: Request) {
   const data = await request.json();
   const now = new Date().getTime();
   const message = `Webhook "${data.name}" sent at "${data.time}" was successfully processed at "${now}".  Thank you!`;
