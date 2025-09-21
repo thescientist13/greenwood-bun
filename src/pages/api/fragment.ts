@@ -1,11 +1,13 @@
+  // @ts-expect-error - https://github.com/ProjectEvergreen/wcc/issues/203
 import { renderFromHTML } from 'wc-compiler';
-import { getProducts } from '../../services/products.js';
+import { getProducts } from '../../services/products.ts';
 
-export async function handler(request) {
+export async function handler(request: Request) {
   const params = new URLSearchParams(request.url.slice(request.url.indexOf('?')));
   const limit = params.has('limit') ? parseInt(params.get('limit'), 10) : 5;
   const offset = params.has('offset') ? parseInt(params.get('offset'), 10) : 0;
   const products = (await getProducts()).slice(offset, offset + limit);
+  // @ts-expect-error - https://github.com/ProjectEvergreen/wcc/issues/203
   const { html } = await renderFromHTML(`
     ${
       products.map((item, idx) => {
@@ -20,7 +22,7 @@ export async function handler(request) {
       }).join('')
     }
   `, [
-    new URL('../../components/card.js', import.meta.url)
+    new URL('../../components/card.ts', import.meta.url)
   ]);
 
   return new Response(html, {

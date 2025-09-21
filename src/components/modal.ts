@@ -1,5 +1,9 @@
 const template = document.createElement('template');
 
+type CustomModalEventDetails = {
+  content: string;
+}
+
 template.innerHTML = `
   <style>
     dialog {
@@ -41,7 +45,7 @@ template.innerHTML = `
 
 export default class Modal extends HTMLElement {
 
-  updateModal(detail) {
+  updateModal(detail: CustomModalEventDetails) {
     console.log(`selected item is => ${detail.content}`);
     const modal = this.shadowRoot.querySelector('dialog');
     
@@ -56,7 +60,7 @@ export default class Modal extends HTMLElement {
     }
 
     // setup event handlers for updating and closing the dialog
-    window.addEventListener('update-modal', (event) => {
+    window.addEventListener('update-modal', (event: CustomEvent<CustomModalEventDetails>) => {
       this.updateModal(event.detail);
     })
 

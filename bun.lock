@@ -5,8 +5,12 @@
       "name": "greenwood-bun",
       "devDependencies": {
         "@greenwood/cli": "~0.33.0",
+        "typescript": "^5.9.2",
       },
     },
+  },
+  "patchedDependencies": {
+    "@greenwood/cli@0.33.0": "patches/@greenwood%2Fcli@0.33.0.patch",
   },
   "packages": {
     "@greenwood/cli": ["@greenwood/cli@0.33.0", "", { "dependencies": { "@rollup/plugin-commonjs": "^28.0.0", "@rollup/plugin-node-resolve": "^15.0.0", "@rollup/plugin-terser": "^0.4.4", "acorn": "^8.14.0", "acorn-walk": "^8.3.4", "amaro": "^1.1.1", "css-tree": "^3.0.0", "es-module-shims": "^1.8.3", "front-matter": "^4.0.2", "koa": "^3.0.1", "koa-body": "^6.0.1", "livereload": "^0.9.1", "node-html-parser": "^7.0.1", "rollup": "^4.26.0", "wc-compiler": "~0.17.0" }, "bin": { "greenwood": "src/bin.js" } }, "sha512-73gbvGdqbXVIv4h+30lYW+ccEZF47LpKdxNhlzvYvYjrJGHSQ/qfktA5KmKVCkW+a/+TJLToz0bhITN39lw4wA=="],
@@ -440,6 +444,8 @@
     "tsscmp": ["tsscmp@1.0.6", "", {}, "sha512-LxhtAkPDTkVCMQjt2h6eBVY28KCjikZqZfMcC15YBeNjkgUpdCfBu5HoiOTDu86v6smE8yOjyEktJ8hlbANHQA=="],
 
     "type-is": ["type-is@2.0.1", "", { "dependencies": { "content-type": "^1.0.5", "media-typer": "^1.1.0", "mime-types": "^3.0.0" } }, "sha512-OZs6gsjF4vMp32qrCbiVSkrFmXtG/AZhY3t0iAMrMBiAZyV9oALtXO8hsrHbMXF9x6L3grlFuwW2oAz7cav+Gw=="],
+
+    "typescript": ["typescript@5.9.2", "", { "bin": { "tsc": "bin/tsc", "tsserver": "bin/tsserver" } }, "sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A=="],
 
     "undici-types": ["undici-types@6.20.0", "", {}, "sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg=="],
 

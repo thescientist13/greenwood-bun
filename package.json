@@ -23,9 +23,14 @@
     "dev": "greenwood develop",
     "build": "greenwood build",
     "serve": "greenwood build && greenwood serve",
-    "start": "bun serve"
+    "start": "bun serve",
+    "check": "tsc"
   },
   "devDependencies": {
-    "@greenwood/cli": "~0.33.0"
+    "@greenwood/cli": "~0.33.0",
+    "typescript": "^5.9.2"
+  },
+  "patchedDependencies": {
+    "@greenwood/cli@0.33.0": "patches/@greenwood%2Fcli@0.33.0.patch"
   }
 }
