@@ -26,8 +26,13 @@
     "start": "bun serve",
     "check": "tsc"
   },
+  "dependencies": {
+    "lit": "^3.3.1"
+  },
   "devDependencies": {
-    "@greenwood/cli": "~0.33.0",
+    "@greenwood/cli": "0.33.0",
+    "@greenwood/plugin-import-raw": "0.33.0",
+    "@greenwood/plugin-renderer-lit": "0.33.0",
     "typescript": "^5.9.2"
   },
   "patchedDependencies": {

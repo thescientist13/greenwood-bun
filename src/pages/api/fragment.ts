@@ -1,16 +1,20 @@
-  // @ts-expect-error - https://github.com/ProjectEvergreen/wcc/issues/203
-import { renderFromHTML } from 'wc-compiler';
+import { render } from '@lit-labs/ssr';
+import { collectResult } from '@lit-labs/ssr/lib/render-result.js'
+import { html } from 'lit';
+import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import { getProducts } from '../../services/products.ts';
+// TODO: import '../../components/card/card.ts';
+
+export const isolation = true;
 
 export async function handler(request: Request) {
   const params = new URLSearchParams(request.url.slice(request.url.indexOf('?')));
   const limit = params.has('limit') ? parseInt(params.get('limit'), 10) : 5;
   const offset = params.has('offset') ? parseInt(params.get('offset'), 10) : 0;
   const products = (await getProducts()).slice(offset, offset + limit);
-  // @ts-expect-error - https://github.com/ProjectEvergreen/wcc/issues/203
-  const { html } = await renderFromHTML(`
+  const body = await collectResult(render(html`
     ${
-      products.map((item, idx) => {
+      unsafeHTML(products.map((item, idx) => {
         const { title, thumbnail } = item;
 
         return `
@@ -19,13 +23,11 @@ export async function handler(request: Request) {
             thumbnail="${thumbnail}"
           ></app-card>
         `;
-      }).join('')
+      }).join(''))
     }
-  `, [
-    new URL('../../components/card.ts', import.meta.url)
-  ]);
+  `));
 
-  return new Response(html, {
+  return new Response(body, {
     headers: new Headers({
       'Content-Type': 'text/html'
     })

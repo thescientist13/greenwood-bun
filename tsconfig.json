@@ -9,7 +9,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "verbatimModuleSyntax": true,
     "erasableSyntaxOnly": true,
+    "skipLibCheck": true
   },
-
-  "exclude": ["./public/", "./greenwood/", "node_modules"],
+  "exclude": ["./public/", "./greenwood/", "node_modules"]
 }
