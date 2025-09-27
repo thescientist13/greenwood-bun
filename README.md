@@ -16,7 +16,7 @@ You can now run these npm scripts
 
 ## Demo
 
-This repo aims to demonstrate a couple of Greenwood's features ([API Routes](https://www.greenwoodjs.io/docs/api-routes/) and [SSR pages](https://www.greenwoodjs.io/docs/server-rendering/#routes)) focused on using Web Components (WCC) and Web Standards to deliver the content for the demo.
+This repo aims to demonstrate a couple of Greenwood's features ([API Routes](https://www.greenwoodjs.io/docs/api-routes/) and [SSR pages](https://www.greenwoodjs.io/docs/server-rendering/#routes)) focused on using Web Components (Lit) and Web Standards to deliver the content for the demo.
 
 ### API Routes
 

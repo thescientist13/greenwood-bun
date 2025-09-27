@@ -1,6 +1,6 @@
 import { LitElement, html, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-// import styles from './card.css?type=raw';
+import styles from './card.css?type=raw';
 
 @customElement('app-card')
 export class Card extends LitElement {
@@ -11,7 +11,7 @@ export class Card extends LitElement {
   @property()
   accessor thumbnail: string;
 
-  // static styles = [unsafeCSS(styles)];
+  static styles = [unsafeCSS(styles)];
 
   constructor() {
     super();
