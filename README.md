@@ -18,6 +18,8 @@ You can now run these npm scripts
 
 This repo aims to demonstrate a couple of Greenwood's features ([API Routes](https://www.greenwoodjs.io/docs/api-routes/) and [SSR pages](https://www.greenwoodjs.io/docs/server-rendering/#routes)) focused on using Web Components (Lit) and Web Standards to deliver the content for the demo.
 
+> _Adapted from this [demo repo](https://github.com/thescientist13/greenwood-lit-ssr)_.
+
 ### API Routes
 
 - ✅  `/api/greeting?name{xxx}` - An API that returns a JSON response and optionally uses the `name` query param for customization.  Otherwise returns a default message.
