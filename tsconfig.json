@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    // minimum required configuration
+    "target": "es2022",
+    "module": "preserve",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+
+    // additional recommended configuration
+    "lib": ["es2022", "DOM", "DOM.Iterable", "esnext"],
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+
+    // project specific configurations
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+  },
+  "exclude": ["./public/", "./greenwood/", "node_modules"],
+}

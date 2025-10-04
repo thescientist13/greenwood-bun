@@ -41,11 +41,11 @@ template.innerHTML = `
 
 export default class Modal extends HTMLElement {
 
-  updateModal(detail) {
-    console.log(`selected item is => ${detail.content}`);
+  updateModal(content: string) {
+    console.log(`selected item is => ${content}`);
     const modal = this.shadowRoot.querySelector('dialog');
     
-    modal.querySelector('#content').textContent = detail.content;
+    modal.querySelector('#content').textContent = content;
     modal.showModal();
   }
 
@@ -56,8 +56,8 @@ export default class Modal extends HTMLElement {
     }
 
     // setup event handlers for updating and closing the dialog
-    window.addEventListener('update-modal', (event) => {
-      this.updateModal(event.detail);
+    window.addEventListener('update-modal', (event: CustomEvent) => {
+      this.updateModal(event.detail.content);
     })
 
     const modal = this.shadowRoot.querySelector('dialog');
