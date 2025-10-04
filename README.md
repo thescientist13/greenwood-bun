@@ -26,3 +26,10 @@ This repo aims to demonstrate a couple of Greenwood's features ([API Routes](htt
 ### SSR Pages
 
 - ✅ `/products/` - SSR page for rendering Greenwood pages.
+
+
+## Upstreams
+
+1. [ ] (Greenwood) - [refine node modules resource plugin](https://github.com/ProjectEvergreen/greenwood/pull/1577/)
+1. [ ] (Bun) - [Decorators are not support](https://github.com/oven-sh/bun/issues/4122#issuecomment-2775035141)
+1. [ ] (Bun) - [Plugins in workers are not supported](https://github.com/oven-sh/bun/issues/12608#issuecomment-3342167423) (means Greenwood custom loaders can't be used)
