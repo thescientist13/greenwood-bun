@@ -20,5 +20,8 @@ jobs:
       - name: Check Types
         run: bun run check
 
+      - name: Run Tests
+        run: bun run test
+
       - name: Build
         run: bun run --bun build

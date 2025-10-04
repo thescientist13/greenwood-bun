@@ -24,10 +24,13 @@
     "build": "greenwood build",
     "serve": "greenwood build && greenwood serve",
     "start": "bun serve",
+    "test": "bun test --reporter=junit --reporter-outfile=./coverage.xml",
+    "test:tdd": "bun test --watch",
     "check": "tsc"
   },
   "devDependencies": {
     "@greenwood/cli": "~0.33.3",
+    "@happy-dom/global-registrator": "^19.0.2",
     "typescript": "^5.9.3"
   },
   "patchedDependencies": {
