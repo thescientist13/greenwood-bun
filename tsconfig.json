@@ -13,6 +13,7 @@
     "erasableSyntaxOnly": true,
 
     // project specific configurations
+    "skipLibCheck": true,
     "noImplicitAny": true,
     "allowSyntheticDefaultImports": true,
   },

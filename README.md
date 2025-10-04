@@ -13,6 +13,8 @@ To run locally:
 You can now run these npm scripts
 - `bun run --bun dev` - Start the demo with Greenwood local dev server
 - `bun run --bun start` - Start the demo with a production Greenwood build
+- `bun run test` - Run tests
+- `bun run test:tdd` - Run tests in watch mode
 
 ## Demo
 
