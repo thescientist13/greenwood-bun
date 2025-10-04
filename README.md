@@ -18,7 +18,9 @@ You can now run these npm scripts
 
 This repo aims to demonstrate a couple of Greenwood's features ([API Routes](https://www.greenwoodjs.io/docs/api-routes/) and [SSR pages](https://www.greenwoodjs.io/docs/server-rendering/#routes)) focused on using Web Components (Lit) and Web Standards to deliver the content for the demo.
 
-> _Adapted from this [demo repo](https://github.com/thescientist13/greenwood-lit-ssr)_.
+> _Adapted from these two demo repos:_
+> - https://github.com/thescientist13/greenwood-lit-ssr
+> - https://github.com/ProjectEvergreen/greenwood-demo-adapter-vercel
 
 ### API Routes
 
