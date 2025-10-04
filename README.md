@@ -22,11 +22,13 @@ This repo aims to demonstrate a couple of Greenwood's features ([API Routes](htt
 
 - ✅  `/api/greeting?name{xxx}` - An API that returns a JSON response and optionally uses the `name` query param for customization.  Otherwise returns a default message.
 - ✅ `/api/fragment` - An API for returning fragments of server rendered Web Components as HTML, that are then appended to the DOM.  The same card component used in SSR also runs on the client to provide interactivity, like event handling.
+- ✅ `/api/search` - An API for handling a search using request.formData()
+- ✅ `/api/event` - An API for mimicking a webhook POST request that uses request.json()
 
 ### SSR Pages
 
+- ✅ `/blog/first-post/` - Nested SSR page for rendering a content page.
 - ✅ `/products/` - SSR page for rendering Greenwood pages.
-
 
 ## Upstreams
 
