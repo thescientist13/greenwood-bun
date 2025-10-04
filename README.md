@@ -1,6 +1,6 @@
 # greenwood-bun
 
-A demonstration repo of using Greenwood with Bun.
+A demonstration repo of using [Greenwood](https://greenwoodjs.dev/) with [Bun](https://bun.sh/) and WCC for server-rendering.
 
 ## Setup
 

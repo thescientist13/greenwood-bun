@@ -1,4 +1,4 @@
-function getMessage(name) {
+function getMessage(name: string) {
   return `Hello ${name}!`;
 }
 

@@ -1,0 +1,39 @@
+diff --git a/src/plugins/resource/plugin-node-modules.js b/src/plugins/resource/plugin-node-modules.js
+index 9c983a2f3f4bb043ee9aa3f6e090509444156edd..7a2b25d902afdc4ed4603182e5d0a8523f5e4019 100644
+--- a/src/plugins/resource/plugin-node-modules.js
++++ b/src/plugins/resource/plugin-node-modules.js
+@@ -41,14 +41,19 @@ class NodeModulesResource {
+   }
+ 
+   async shouldServe(url) {
+-    const { href, protocol } = url;
++    const { href, protocol, pathname } = url;
+ 
+-    return protocol === "file:" && (await checkResourceExists(new URL(href)));
++    return (
++      protocol === "file:" &&
++      pathname.indexOf("/node_modules/") >= 0 &&
++      (await checkResourceExists(new URL(href)))
++    );
+   }
+ 
+   async serve(url) {
+     const body = await fs.readFile(url, "utf-8");
+ 
++    // TODO: most likely a JavaScript file, but perhaps we should further refine based on extension?
+     return new Response(body, {
+       headers: new Headers({
+         "Content-Type": this.contentType,
+diff --git a/src/plugins/resource/plugin-standard-html.js b/src/plugins/resource/plugin-standard-html.js
+index f1d1153df9170f77cf8eef22b987e7299b906eb5..30ab824587539ec32a680be2ce0562c48241b019 100644
+--- a/src/plugins/resource/plugin-standard-html.js
++++ b/src/plugins/resource/plugin-standard-html.js
+@@ -13,7 +13,7 @@ import { parse } from "node-html-parser";
+ class StandardHtmlResource {
+   constructor(compilation) {
+     this.compilation = compilation;
+-    this.extensions = [".html"];
++    this.extensions = ["html"];
+     this.contentType = "text/html";
+   }
+ 
