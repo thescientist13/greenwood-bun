@@ -1,3 +1,19 @@
+diff --git a/node_modules/@greenwood/cli/.bun-tag-97e9e1dd8376554b b/.bun-tag-97e9e1dd8376554b
+new file mode 100644
+index 0000000000000000000000000000000000000000..e69de29bb2d1d6434b8b29ae775ad8c2e48c5391
+diff --git a/src/plugins/resource/plugin-active-content.js b/src/plugins/resource/plugin-active-content.js
+index d0edaf1f75184b4ff602f48a838bfb7380f06397..4a573e34c77460c7ab208b5b63d5f646c9a7e063 100644
+--- a/src/plugins/resource/plugin-active-content.js
++++ b/src/plugins/resource/plugin-active-content.js
+@@ -138,7 +138,7 @@ class ContentAsDataResource {
+   async shouldOptimize(url, response) {
+     const { activeContent } = this.compilation.config;
+ 
+-    return response.headers.get("Content-Type").indexOf(this.contentType[0]) >= 0 && activeContent;
++    return response.headers.get("Content-Type")?.indexOf(this.contentType[0]) >= 0 && activeContent;
+   }
+ 
+   async optimize(url, response) {
 diff --git a/src/plugins/resource/plugin-node-modules.js b/src/plugins/resource/plugin-node-modules.js
 index 9c983a2f3f4bb043ee9aa3f6e090509444156edd..7a2b25d902afdc4ed4603182e5d0a8523f5e4019 100644
 --- a/src/plugins/resource/plugin-node-modules.js
