@@ -1,9 +1,4 @@
-// import { expect, test } from "bun:test";
-
-// test("2 + 2", () => {
-//   expect(2 + 2).toBe(4);
-// });
-
+// https://bun.com/docs/cli/test
 import { it, test, expect, describe, afterEach, beforeEach } from 'bun:test';
 import './card.ts';
 
@@ -14,6 +9,7 @@ describe('Components/Card', () => {
 
   beforeEach(async () => {
     card = document.createElement('app-card');
+
     card.setAttribute('title', MOCK_TITLE);
     card.setAttribute('thumbnail', MOCK_IMAGE);
 
